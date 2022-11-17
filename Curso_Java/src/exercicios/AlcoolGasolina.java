@@ -1,0 +1,35 @@
+/* Para carros flex é preciso ter cautela ao escolher o combustível
+ * na hora de abastecer. A principal diferença de preços e vantagens
+ * entre os dois combustíveis está na proporção preço X desempenho.
+ * Para o alcool ser mais vantajoso do que a gasolina,o preço do 
+ * litro tem que custar até 70% do litro da Gasolina.Baseado nestas
+ * informações desenvolva um aplicativo no console(terminal)para 
+ * determinar qual é o combustível mais vantajoso para abastecer.*/
+
+package exercicios;
+
+
+import java.util.Scanner;
+
+public class AlcoolGasolina {
+
+	public static void main(String[] args) {
+	
+		double alcool,gasolina;
+		Scanner leia = new Scanner(System.in);
+		
+		System.out.println("Cálculo do Combustível Álcool ou Gasolina");
+		System.out.print("Valor do Álcool:");
+		alcool = leia.nextDouble();
+		System.out.print("Valor da Gasolina:");
+		gasolina = leia.nextDouble();
+		
+		if (alcool < 0.7 * gasolina) {
+			System.out.println("Abastecer com Álcool");
+		}else {
+			System.out.println("Abastecer com Gasolina");
+		}
+		leia.close();
+	}
+
+}

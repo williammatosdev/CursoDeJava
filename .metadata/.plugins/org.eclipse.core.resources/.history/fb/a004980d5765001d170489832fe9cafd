@@ -1,0 +1,32 @@
+/* Desenvolva uma aplicação no console(terminal) para calcular a 
+   porcentagem usando Regra de 3,conforme modelo abaixo:
+  */
+
+package exercicios;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Regra3 {
+
+	public static void main(String[] args) {
+		//Variáveis
+		double x,y,valor;
+		//Objetos
+		Scanner leia = new Scanner(System.in);
+		DecimalFormat formatador = new DecimalFormat("#0.00");
+		System.out.println("Regra de 3");
+		System.out.println("X% de y = valor");
+		System.out.println("Digite o valor de X:");
+		x = leia.nextDouble();
+		System.out.println("Digite o valor de Y:");
+		y = leia.nextDouble();
+		//Processamento
+		valor = (x * y) / 100;
+		//Saída
+		System.out.println(x + "% de " + y + " = " + formatador.format(valor));
+		leia.close();
+
+	}
+
+}

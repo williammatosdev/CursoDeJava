@@ -1,0 +1,39 @@
+/* Desenvolva uma aplicação no console(terminal) para calcular
+ * o valor da hora de serviço,de acordo com a fórmula abaixo:
+ * 
+ *  hora = remuneracao mensal + impostos + custo operacional + investimentos
+ *                      carga horaria mensal de trabalho
+ *                      
+ *   impostos: 30% da remuneração mensal
+ *   investimento: 20% da remuneração mensal*/
+                      
+package exercicios;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class ValorServico {
+
+	public static void main(String[] args) {
+		//Variaáveis
+		double hora,remuneracao,custo,cargaHoraria;
+		//Objetos
+		Scanner leia = new Scanner(System.in);
+		DecimalFormat formatador = new DecimalFormat("#0.00");
+		//Entrada
+		System.out.println("Cálculo do valor da hora de um serviço");
+		System.out.print("Remuneração mensal pretendida:");
+		remuneracao = leia.nextDouble();
+		System.out.print("Custo operacional mensal:");
+		custo = leia.nextDouble();
+		System.out.print("Carga horaria mensal de trabalho:");
+		cargaHoraria = leia.nextDouble();
+		//Processamento
+		hora = (remuneracao + (remuneracao * 0.3) + custo + (remuneracao * 0.2)) / cargaHoraria;
+		//Saída
+		System.out.println("Valor da Hora: " + formatador.format(hora));
+		leia.close();
+
+	}
+
+}
